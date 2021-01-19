@@ -55,12 +55,9 @@ public class ArticleController {
 
   @RequestMapping(value = {"/articles/{id}"}, method = RequestMethod.DELETE,
       produces = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<String> deleteArticle(@PathVariable String id)
-      throws AppException {
+  public ResponseEntity<String> deleteArticle(@PathVariable String id) throws AppException {
     log.info("payload: " + id);
     articleService.remove(id);
     return new ResponseEntity<String>(HttpStatus.OK);
   }
-
-
 }

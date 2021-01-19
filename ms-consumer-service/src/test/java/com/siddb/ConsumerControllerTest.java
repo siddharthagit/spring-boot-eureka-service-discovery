@@ -11,11 +11,11 @@ import org.springframework.cloud.openfeign.FeignAutoConfiguration;
 import org.springframework.cloud.openfeign.ribbon.FeignRibbonClientAutoConfiguration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import com.siddb.controller.ConsumerController;
+import com.siddb.controller.RibbonController;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(
-    classes = {ConsumerController.class})
+    classes = {RibbonController.class})
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @ImportAutoConfiguration({RibbonAutoConfiguration.class, FeignRibbonClientAutoConfiguration.class,
     FeignAutoConfiguration.class})
@@ -23,7 +23,7 @@ import com.siddb.controller.ConsumerController;
 public class ConsumerControllerTest {
 
   @InjectMocks
-  private ConsumerController controller;
+  private RibbonController controller;
 
   @BeforeAll
   public void setup() {

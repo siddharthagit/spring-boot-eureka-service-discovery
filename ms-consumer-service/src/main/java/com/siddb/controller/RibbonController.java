@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.JsonNode;
 
 @RestController
-public class ConsumerController {
+public class RibbonController {
 
   @Autowired
   private RestTemplate restTemplate;

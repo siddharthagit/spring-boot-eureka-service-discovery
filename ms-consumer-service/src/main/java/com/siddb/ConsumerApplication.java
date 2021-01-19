@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan({"com.bootng", "com.bootng.controller"})
+@ComponentScan({"com.siddb", "com.siddb.controller"})
 @SpringBootApplication
 @EnableDiscoveryClient
 public class ConsumerApplication {
